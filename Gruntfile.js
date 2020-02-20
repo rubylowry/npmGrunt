@@ -12,26 +12,35 @@ module.exports = function(grunt) {
     //     dest: 'build/<%= pkg.name %>.min.js'
     //   }
     // }
-    sass: {                              // Task
-    dist: {                            // Target
-      options: {                       // Target options
-        style: 'expanded'
+      sass: {                              // Task
+          dist: {                            // Target
+            options: {                       // Target options
+              style: 'expanded'
+            },
+            files: {                         // Dictionary of files
+              'css/style.css': 'sass/style.scss'    // 'destination': 'source'
+            }
+          }
       },
-      files: {                         // Dictionary of files
-        'css/style.css': 'sass/style.scss'    // 'destination': 'source'
-
-      }
-      }
-    },
-    jshint: {
-      all: ['Gruntfile.js', 'js/*.js']
-    }
-  });
+      // Watching declared files for functions
+      watch: {
+        all: {
+          files: ['js/script.js'],
+          tasks: ['jshint']
+        }
+      },
+      // Js hint settings
+      jshint: {
+        all: ['Gruntfile.js', 'js/*.js']
+      },
+      
+    });
 
   // Load the plugin that provides the "uglify" task.
   // grunt.loadNpmTasks('grunt-contrib-uglify');
-     grunt.loadNpmTasks('grunt-contrib-sass');
-     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
 
   // Default task(s).

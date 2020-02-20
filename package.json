@@ -1,7 +1,6 @@
 {
   "name": "nodeNpm",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,9 +11,21 @@
   "devDependencies": {
     "bootstrap": "^4.4.1",
     "grunt": "^1.0.4",
+    "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-jshint": "^2.1.0",
     "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.1"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubylowry/npmGrunt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubylowry/npmGrunt/issues"
+  },
+  "homepage": "https://github.com/rubylowry/npmGrunt#readme",
+  "description": ""
 }

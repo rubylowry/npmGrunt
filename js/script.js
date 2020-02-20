@@ -16,6 +16,7 @@ function(data){
     console.log(value);
 
     var name = value.user.name;
+    console.log()
     var bio = value.user.bio;
     var imageURL = value.urls.regular;
     console.log(imageURL);
